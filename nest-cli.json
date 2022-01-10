@@ -1,4 +1,39 @@
 {
   "collection": "@nestjs/schematics",
-  "sourceRoot": "src"
+  "sourceRoot": "apps/learning-project1/src",
+  "monorepo": true,
+  "root": "apps/learning-project1",
+  "compilerOptions": {
+    "webpack": true,
+    "tsConfigPath": "apps/learning-project1/tsconfig.app.json"
+  },
+  "projects": {
+    "learning-project1": {
+      "type": "application",
+      "root": "apps/learning-project1",
+      "entryFile": "main",
+      "sourceRoot": "apps/learning-project1/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/learning-project1/tsconfig.app.json"
+      }
+    },
+    "hans": {
+      "type": "application",
+      "root": "apps/hans",
+      "entryFile": "main",
+      "sourceRoot": "apps/hans/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/hans/tsconfig.app.json"
+      }
+    },
+    "computer": {
+      "type": "application",
+      "root": "apps/computer",
+      "entryFile": "main",
+      "sourceRoot": "apps/computer/src",
+      "compilerOptions": {
+        "tsConfigPath": "apps/computer/tsconfig.app.json"
+      }
+    }
+  }
 }
